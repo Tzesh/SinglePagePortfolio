@@ -1,0 +1,541 @@
+/*
+CSS file of ugurdindar.com
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 1.6rem 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* loading overlay */
+
+#loading-overlay {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    transition: 2s ease-out all;
+}
+
+#loading-progress {
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    width: 0;
+    top: 50%;
+}
+
+#loading-status {
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+/*header*/
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .bg-image {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+    animation-name: fadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 36s;
+    animation-direction: alternate;
+}
+
+.bg-image:nth-of-type(1) {
+    animation-delay: 27s;
+}
+
+.bg-image:nth-of-type(2) {
+    animation-delay: 18s;
+}
+
+.bg-image:nth-of-type(3) {
+    animation-delay: 9s;
+}
+
+.bg-image:nth-of-type(4) {
+    animation-delay: 0s;
+}
+
+.image-1 {
+    background-image: linear-gradient(rgba(51, 51, 51, 0.50), rgba(51, 51, 51, 0.50)), url("../img/background0.jpg");
+}
+
+.image-2 {
+    background-image: linear-gradient(rgba(51, 51, 51, 0.50), rgba(51, 51, 51, 0.50)), url("../img/background1.jpg");
+}
+
+.image-3 {
+    background-image: linear-gradient(rgba(51, 51, 51, 0.50), rgba(51, 51, 51, 0.50)), url("../img/background2.jpg");
+}
+
+.image-4 {
+    background-image: linear-gradient(rgba(51, 51, 51, 0.50), rgba(51, 51, 51, 0.50)), url("../img/background3.jpg");
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.avatar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 15rem;
+    height: 15rem;
+    transition: all 0.25s;
+}
+
+.avatar:hover,
+.avatar:active {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+}
+
+.hidden-text {
+    visibility: hidden;
+    transition: all 0.25s ease-in;
+}
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 15em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+#gradient-text {
+    background-image: linear-gradient(45deg,
+            #ffffff,
+            #aeb4ce);
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.anim-typewriter {
+    animation: typewriter 4s steps(35) 1s 1 normal both,
+        blinkTextCursor 850ms steps(35) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 15em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+#scaling {
+    animation-name: scalex;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name: scalex;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: scale;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+
+@keyframes scalex {
+    from {
+        -webkit-transform: scale(0.9);
+    }
+
+    65% {
+        -webkit-transform: scale(1.0);
+    }
+
+    to {
+        -webkit-transform: scale(0.9);
+    }
+}
+
+@-webkit-keyframes scalex {
+    from {
+        -webkit-transform: scale(0.9);
+    }
+
+    65% {
+        -webkit-transform: scale(1.0);
+    }
+
+    to {
+        -webkit-transform: scale(0.9);
+    }
+}
+
+@-moz-keyframes scale {
+    from {
+        -moz-transform: scale(0.9);
+    }
+
+    65% {
+        -moz-transform: scale(1.0);
+    }
+
+    to {
+        -moz-transform: scale(0.9);
+    }
+}
+
+header h1 {
+    color: lightgray;
+    padding: 11rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.25s ease-out;
+}
+
+header h1:hover,
+header h1:active {
+    font-size: 250%;
+    color: white;
+}
+
+header h2 {
+    font-size: 2.25rem;
+}
+
+.blinking-cursor {
+    user-select: none;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+.button {
+    display: inline-block;
+    background: #333;
+    color: white;
+    border: 1px solid #666;
+    padding: 1.6rem 3.2rem;
+    margin: .5rem 0;
+    transition: all 0.3s;
+    transition-timing-function: linear;
+}
+
+.button:hover,
+.button:active {
+    background-color: white;
+}
+
+.button:hover,
+.button:active #online {
+    color: black;
+}
+
+button {
+    display: contents;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.button:active {
+    border-color: transparent;
+    outline: none;
+}
+
+dot {
+    color: black;
+}
+
+
+/*projects*/
+
+article {
+    padding: 0rem;
+}
+
+article .col-sm-12 {
+    background: #333;
+    color: #333;
+}
+
+#repository-card {
+    padding: 1.6rem;
+    transition: .5s ease-out all;
+}
+
+#repository-card:hover,
+#repository-card:active {
+    transform: translate(0, -2.1rem);
+    border-radius: 1rem;
+    background-image: linear-gradient(rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.85)), url("../img/cursor.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 1.5px 1.5px 1.5px rgba(234, 234, 234, 0.75);
+    -webkit-box-shadow: 0px 1.5px 1.5px 1.5px rgba(234, 234, 234, 0.75);
+    -moz-box-shadow: 0px 1.5px 1.5px 1.5px rgba(234, 234, 234, 0.75);
+}
+
+#repository-header a {
+    color: rgba(68, 150, 190);
+    transition: .2s ease-in all;
+}
+
+#repository-header a:hover {
+    color: #ffffff;
+    font-size: 120%;
+}
+
+#repository-icon {
+    color: #737B84;
+}
+
+#repository-description,
+#repository-information {
+    color: rgb(214, 214, 214);
+}
+
+#repository-information i {
+    font-size: 1.5rem;
+}
+
+#repository-information p {
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*adding color to programming languages*/
+
+#Java {
+    color: #BE8744;
+}
+
+#Csharp {
+    color: #407F28;
+}
+
+#HTML {
+    color: #E34C26;
+}
+
+#JavaScript {
+    color: #F1E05A;
+}
+
+#Python {
+    color: #3572A5;
+}
+
+
+/*information*/
+
+.information {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 5rem;
+    transition: all .25s ease-in-out;
+}
+
+.information:hover,
+.information:active {
+    background-color: #333;
+    color: #eaeaea;
+}
+
+
+/*social*/
+
+#social-and-about-me .col-sm-12 {
+    padding: 5rem;
+    transition: all .25s ease-in-out;
+    background-color: #333;
+}
+
+#social-and-about-me .col-sm-12:first-child {
+    background-image: radial-gradient(circle, #1eb1ff, #00a1f7, #0090ef, #007fe5, #006eda, #2562c6, #3157b3, #364ca0, #3d4583, #3e3f67, #3a394c, #333333);
+    border: #333 0.5rem;
+}
+
+#social-and-about-me .col-sm-12:first-child:active,
+#social-and-about-me .col-sm-12:first-child:hover {
+    transform: translate(+1rem, +1rem);
+    box-shadow: 0px -1.5px 1.5px .75px rgba(51, 51, 51, 0.75);
+    -webkit-box-shadow: 0px -1.5px 1.5px .75px rgba(51, 51, 51, 0.75);
+    -moz-box-shadow: 0px -1.5px 1.5px .75px rgba(51, 51, 51, 0.75);
+}
+
+
+#social-and-about-me .col-sm-12:nth-child(2):active,
+#social-and-about-me .col-sm-12:nth-child(2):hover {
+    transform: translate(-1rem, +1rem);
+    background: #eaeaea;
+    color: #333;
+    box-shadow: 0px -1.5px 1.5px .75px rgba(51, 51, 51, 0.75);
+    -webkit-box-shadow: 0px -1.5px 1.5px .75px rgba(51, 51, 51, 0.75);
+    -moz-box-shadow: 0px -1.5px 1.5px .75px rgba(51, 51, 51, 0.75);
+}
+
+#social-and-about-me .fab {
+    color: white;
+    text-decoration: none;
+    margin: 1.6rem;
+    margin-bottom: 0;
+    opacity: 0.8;
+    font-size: 3.2rem;
+    transition: all 0.25s;
+}
+
+#social-and-about-me .fab:hover,
+#social-and-about-me .fab:active {
+    color: black;
+    font-size: 4.8rem;
+    margin-top: 0;
+}
+
+#email {
+    color: #1eb1ff;
+    font-size: 125%;
+    transition: all .25s ease-out;
+}
+
+#email:hover, #email:active {
+    color: black;
+}
+
+/*footer*/
+
+footer {
+    padding: 4rem;
+    background: linear-gradient(180deg, rgba(51, 51, 51, 1) 0%, rgba(51, 51, 51, 1) 35%, rgba(234, 234, 234, 0.15) 100%);
+    transition: all .25s ease-in-out;
+}
+
+footer:hover,
+footer:active {
+    transform: translate(0, -1rem);
+    box-shadow: 0px 1.5px 1.5px 1.5px rgba(234, 234, 234, 0.75);
+    -webkit-box-shadow: 0px 1.5px 1.5px 1.5px rgba(234, 234, 234, 0.75);
+    -moz-box-shadow: 0px 1.5px 1.5px 1.5px rgba(234, 234, 234, 0.75);
+}
+
+footer a {
+    color: rgba(187, 225, 246);
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+
+/*responsive*/
+
+@media screen and (min-width:960px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .box {
+        width: 50%;
+        float: left;
+    }
+
+    html {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .bg-image {
+        background-attachment: scroll;
+    }
+}

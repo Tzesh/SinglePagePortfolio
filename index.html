@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+Source code of ugurdindar.com
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="title" content="ugurdindar.com - Uğur Dindar - One page portfolio" />
+  <meta name="description" content="Simple Portfolio of Uğur 'Tzesh' Dindar" />
+  <meta name="subject" content="Simple Portfolio of Uğur 'Tzesh' Dindar" />
+  <meta name="keywords" content="Tzesh, Uğur, Dindar, ugurdindar.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="language" content="en" />
+  <meta name="author" content="Uğur Dindar" />
+  <meta http-equiv="expires" content="0" />
+  <meta name="robots" content="index" />
+  <title>Uğur Dindar - One page portfolio</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/icon.png" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/0f9ed46c05.js" crossorigin="anonymous"></script>
+  <link rel="preload" href="./img/background0.jpg" as="image">
+  <link rel="preload" href="./img/background1.jpg" as="image">
+  <link rel="preload" href="./img/background2.jpg" as="image">
+  <link rel="preload" href="./img/background3.jpg" as="image">
+</head>
+
+<body>
+  <div id="loading-overlay">
+    <div id="loading-status"></div>
+    <div id="loading-progress"></div>
+  </div>
+
+  <audio id="easterAudio">
+    <source src="carry-on-my-wayward-son.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <div class="bg-image image-1"></div>
+    <div class="bg-image image-2"></div>
+    <div class="bg-image image-3"></div>
+    <div class="bg-image image-4"></div>
+    <div class="content">
+      <p class="hidden-text">Click to toggle music</p>
+      <div class="avatar">
+        <button onclick="togglePlay()">
+          <img class="avatar" id="scaling" src="img/avatar.png" alt="Tzesh_avatar" />
+        </button>
+      </div>
+      <h1 class="d-none">Uğur Dindar</h1>
+      <h1 class="d-none">Tzesh</h1>
+      <h2 class="pt-5">
+        <p class="line-1 anim-typewriter" id="gradient-text">Hello there, I'm known as 'Tzesh'</p>
+      </h2>
+      <a href="#about-me-heading" class="button">What does "Tzesh" mean?</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <aside class="information">
+          <h2>Projects</h2>
+          <p>
+            I'm doing my best to don't miss the boat, don't lose my touch, keep up to programming trends by
+            improving my knowledge with developing new projects at the same time
+            learning new things which is a part of my life due to I take a part
+            in the area of Computer Science. The list laying down here is the
+            current full public list of my projects which is taken from GitHub
+            profile of mine.
+          </p>
+      </aside>
+    </section>
+
+    <article>
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between" id="github-container"></div>
+      </div>
+    </article>
+
+    <aside class="information" id="about-me-heading">
+      <h2>What does "Tzesh" mean?</h2>
+      <p>
+        After the era of people that afraid of computers will take over the whole planet just because they are going to
+        enter a new millennium (2000s), we are living in a world that anyone who uses Internet expected to
+        have a nickname. I decided to use "Tzesh" and frankly, it doesn't have
+        a mean yet. Honestly, 'Tzesh' is not probably going to have a mean anytime soon. But in a such a crowded world I
+        decided to choose a meaningless group of letters that looks good (at least in my opinion) to whenever 'Tzesh'
+        rings a bell I will be the one that comes to people's mind.
+      </p>
+    </aside>
+
+    <aside id="social-and-about-me">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-xl-6">
+            <h2 class="content-title">Social</h2>
+            <p>
+              You can find me in almost every social platform & media easily
+              by searching "Tzesh" keyword. But just in case:
+            </p>
+            <a href="http://steamcommunity.com/id/Tzesh"><i class="fab fa-steam-symbol"></i></a>
+            <a href="https://discord.gg/8j9pyyP"><i class="fab fa-discord"></i></a>
+            <a href="http://github.com/Tzesh/"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ugurdindar/"><i class="fab fa-linkedin-in"></i></a>
+            <p class="mt-5">
+              Furthermore, you can get in touch with me via <a href="mailto:mail@ugurdindar.com"
+                id="email">mail@ugurdindar.com</a>
+            </p>
+          </div>
+          
+          <div class="col-sm-12 col-xl-6">
+            <h2 class="content-title">About me</h2>
+            <p>
+              Uğur Dindar - computer engineering (A.K.A computer science)
+              student at Eskişehir Technical University the rest is just an
+              ordinary guy who interested in computer and its technologies.
+            </p>
+            <p>
+              I am currently working as a Software Developer at Ford Otosan
+              while on the other hand studying at the university. You can take
+              a look at my linkedin profile to further information about my
+              knowledge, working experience and so on.
+            </p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div>
+      Designed and coded by <a href="https://github.com/Tzesh">Tzesh</a>
+    </div>
+    <div>© 2020 - 2022</div>
+    <div>All rights reserved</div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+
+  <script src="js/easter_egg.js"></script>
+  <script src="js/github_repository_manager.js"></script>
+  <!-- <script src="js/typing_header.js"></script> -->
+  <script src="js/load_page.js"></script>
+</body>
+
+</html>
